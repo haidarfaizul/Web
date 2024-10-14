@@ -1,14 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Kalkulator Sederhana</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator & To-Do List</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <input type="number" id="angka1" placeholder="Masukkan angka pertama" />
-    <input type="number" id="angka2" placeholder="Masukkan angka kedua" />
-    <button onclick="jumlahkan()">Jumlahkan</button>
-    <p id="hasil"></p>
+    <div class="container">
+      <div class="calculator">
+        <h2>Calculator</h2>
+        <input type="text" id="display" disabled />
+        <div class="buttons">
+          <button onclick="clearDisplay()">C</button>
+          <button onclick="appendToDisplay('^')">^</button>
+          <button onclick="appendToDisplay('%')">%</button>
+          <button onclick="appendToDisplay('/')">/</button>
+          <button onclick="appendToDisplay('7')">7</button>
+          <button onclick="appendToDisplay('8')">8</button>
+          <button onclick="appendToDisplay('9')">9</button>
+          <button onclick="appendToDisplay('*')">*</button>
+          <button onclick="appendToDisplay('4')">4</button>
+          <button onclick="appendToDisplay('5')">5</button>
+          <button onclick="appendToDisplay('6')">6</button>
+          <button onclick="appendToDisplay('-')">-</button>
+          <button onclick="appendToDisplay('1')">1</button>
+          <button onclick="appendToDisplay('2')">2</button>
+          <button onclick="appendToDisplay('3')">3</button>
+          <button onclick="appendToDisplay('+')">+</button>
+          <button onclick="appendToDisplay('0')">0</button>
+          <button onclick="appendToDisplay('.')">.</button>
+          <button onclick="calculate()">=</button>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
+      <div class="todo-app">
+        <h2>To-Do List</h2>
+        <input type="text" id="todo-input" placeholder="Add a new task..." />
+        <button onclick="addTodo()">Add</button>
+        <ul id="todo-list"></ul>
+      </div>
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>
